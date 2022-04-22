@@ -61,27 +61,24 @@ class bot:
     def data_extract(bot, df):
         df.to_csv(r'Data Output/data_output.csv')
             
-        
 
-choice = input("1 to tweet, 2 to search twitter, 3 to get favourites\n")
+choice = input("1 to pull user data, 2 to pull search term data, 3 to get favourites data\n")
 test_bot = bot()
 
 if choice == "1":
     #allows user to tweet from the cmd-line
     x = test_bot.user_search(input("Please enter the twitter handle of the user whose tweets you want to pull:\n"))
+    test_bot.data_extract(x)
 
 elif choice == "2":
     #allows a user to search for tweets related to the string they enter
-    y = test_bot.search_tool(input("Enter a search term:\n"))    
+    y = test_bot.search_tool(input("Enter a search term:\n"))
+    test_bot.data_extract(y)    
 
 else:
     #allows you to search twitter by a topic
     z = test_bot.faves()
+    test_bot.data_extract(z)
 
-
-#May also want to setup a repo
-if choice == "1": test_bot.data_extract(x)
-if choice == "2": test_bot.data_extract(y)
-if choice == "3": test_bot.data_extract(z)
 
 
