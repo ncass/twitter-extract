@@ -54,9 +54,6 @@ class bot:
         df['Tweet ID'] = np.array([tweets.id for tweets in timeline])
         return df
 
-
-
-
     #takes in a pandas dataframe and creates a csv output to be used in tableau
     def data_extract(bot, df):
         df.to_csv(r'Data Output/data_output.csv')
