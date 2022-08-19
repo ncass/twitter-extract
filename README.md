@@ -1,4 +1,3 @@
 # twitter-extract
-this repo demonstrates using the tweepy python module to pull data from the twitter api
-the data is then processed into a pandas dataframe and output as a csv file
-to visualize it using tableau
+using the tweepy python module, this script requests tweet data from an authenticated user via the twitter api
+the data is then processed into a pandas dataframe and output as a csv file which is imported to tableau to visualize
